@@ -7,19 +7,35 @@ const Cart = () => {
 
   useEffect(() => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartItems(cart);
-    calculateTotal(cart);
+    // Ensure each item has quantity (default = 1 if not set)
+    const cartWithQuantity = cart.map(item => ({
+      ...item,
+      quantity: item.quantity || 1
+    }));
+    setCartItems(cartWithQuantity);
+    calculateTotal(cartWithQuantity);
   }, []);
 
   // Function to calculate total price
   const calculateTotal = (cart) => {
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     setTotalPrice(total);
   };
 
   // Remove item from cart
   const removeFromCart = (id) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);
+    setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    calculateTotal(updatedCart);
+  };
+
+  // Update quantity
+  const updateQuantity = (id, quantity) => {
+    if (quantity < 1) return; // prevent 0 or negative
+    const updatedCart = cartItems.map((item) =>
+      item.id === id ? { ...item, quantity: quantity } : item
+    );
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     calculateTotal(updatedCart);
@@ -43,6 +59,22 @@ const Cart = () => {
                   <h3>{product.title}</h3>
                   <p>{product.description}</p>
                   <p>Price: ${product.price}</p>
+                  <div className="d-flex align-items-center">
+                    <button 
+                      className="btn btn-sm btn-outline-dark"
+                      onClick={() => updateQuantity(product.id, product.quantity - 1)}
+                    >
+                      -
+                    </button>
+                    <span className="mx-2">{product.quantity}</span>
+                    <button 
+                      className="btn btn-sm btn-outline-dark"
+                      onClick={() => updateQuantity(product.id, product.quantity + 1)}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p className="mt-2"><b>Subtotal: ${product.price * product.quantity}</b></p>
                 </div>
               </div>
               <button 
@@ -56,7 +88,7 @@ const Cart = () => {
         ))
       )}
       <div className="totalPrice mt-3">
-        <h3>Total Price: ${totalPrice}</h3>
+        <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
       </div>
     </div>
   );
