@@ -27,7 +27,7 @@ function StoreNavbar({ onSearch, onCategorySelect }) {
   return (
     <Navbar expand="lg" style={{ background: 'lightblue' }} className='m-0 p-0'>
       <Container fluid>
-        <Navbar.Brand href="/ReactEcommerce/"><b>MyStore</b></Navbar.Brand>
+        <Navbar.Brand ><b>MyStore</b></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }}>
@@ -57,6 +57,7 @@ function StoreNavbar({ onSearch, onCategorySelect }) {
               <NavDropdown.Item onClick={() => handleCategory('womens-bags')}>womens-bags</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <Link to='/ReactEcommerce' className='m-3' style={{textDecoration:'none', color:'black'}}>Home</Link>
           <Link to='/ReactEcommerce/cart' className='m-3' style={{textDecoration:'none', color:'black'}}>MyCart</Link>
           <Form className="d-flex" onSubmit={handleSearch}>
             <Form.Control
