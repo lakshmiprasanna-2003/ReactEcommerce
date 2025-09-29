@@ -13,8 +13,10 @@ function ProductCard({product}) {
         <Card.Title><b>{product.title}</b></Card.Title>
         <Card.Text><b>Price: ${product.price}</b></Card.Text>
         <Card.Text>Category: {product.category}</Card.Text>
+        
       </Card.Body>
     </Card>
+
   );
 }
 

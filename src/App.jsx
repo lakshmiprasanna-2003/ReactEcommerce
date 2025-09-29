@@ -8,7 +8,7 @@ import Cart from './pages/CartPage'
 const App = () => {
   return (
     <div style={{overflow:"hidden"}}>
-      <StoreNavbar />
+
       <Routes>
         <Route path='/ReactEcommerce' element= {< Home />} />
         <Route path='/ReactEcommerce/product/:id' element= {< Product />} />
