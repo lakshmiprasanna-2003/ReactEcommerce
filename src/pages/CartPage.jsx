@@ -87,7 +87,7 @@ const Cart = () => {
           </div>
         ))
       )}
-      <div className="totalPrice mt-3">
+      <div className="totalPrice mt-3" style={{ textAlign: 'left' }}>
         <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
       </div>
     </div>

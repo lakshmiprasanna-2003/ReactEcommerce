@@ -57,8 +57,8 @@ function StoreNavbar({ onSearch, onCategorySelect }) {
               <NavDropdown.Item onClick={() => handleCategory('womens-bags')}>womens-bags</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Link to='/ReactEcommerce' className='m-3' style={{textDecoration:'none', color:'black'}}>Home</Link>
-          <Link to='/ReactEcommerce/cart' className='m-3' style={{textDecoration:'none', color:'black'}}>MyCart</Link>
+          <Link to='/ReactEcommerce/' className='m-3' style={{textDecoration:'none', color:'black'}}>Home</Link>
+          <Link to='/ReactEcommerce/cart/' className='m-3' style={{textDecoration:'none', color:'black'}}>MyCart</Link>
           <Form className="d-flex" onSubmit={handleSearch}>
             <Form.Control
               type="search"
