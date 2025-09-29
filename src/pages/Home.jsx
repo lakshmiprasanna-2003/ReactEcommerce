@@ -3,6 +3,9 @@ import Category from '../Comonents/Category'
 import Carousel from '../Comonents/Carousel'
 import axios from 'axios'
 import ProductCard from '../Comonents/ProductCard'
+import cat1 from '../assets/cat1.webp';
+
+
 
 const Home = () => {
     const[storeProduct, setStoreProduct]=useState([])
