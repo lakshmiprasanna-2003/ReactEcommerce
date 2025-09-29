@@ -9,7 +9,7 @@ import slider2 from '../assets/slider1.jpg';
 
 
 
-function carousel() {
+function Carousel() {
   const settings = {
     className: "",
     dots: true,
@@ -26,10 +26,10 @@ function carousel() {
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-          <img src="public/slider1.jpg" height={"500"} width={"100%"} style={{objectFit:"cover", objectPosition:"center"}}/>
+          <img src={slider1} height={"500"} width={"100%"} style={{objectFit:"cover", objectPosition:"center"}}/>
         </div >
         <div>
-          <img src="public/slider2.jpg" height={"500"} width={"100%"} style={{objectFit:"cover", objectPosition:"top"}} />
+          <img src={slider2} height={"500"} width={"100%"} style={{objectFit:"cover", objectPosition:"top"}} />
         </div>
         
       </Slider>
@@ -37,4 +37,4 @@ function carousel() {
   );
 }
 
-export default carousel;
+export default Carousel;

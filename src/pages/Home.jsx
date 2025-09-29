@@ -22,11 +22,11 @@ const Home = () => {
         <Carousel />
         <h1 className='m-5'>Categories</h1>
         <div style={{display:'flex', columnGap:'60px', justifyContent:'center', textAlign:'center'}}>
-            <Category fileName={'cat1.webp'} categoryName={'beauty'} />
-            <Category fileName={'cat1.webp'} categoryName={'fragrances'} />
-            <Category fileName={'cat1.webp'} categoryName={'tops'} />
-            <Category fileName={'cat1.webp'} categoryName={'Denim'} />
-            <Category fileName={'cat1.webp'} categoryName={'Denim'} />
+            <Category fileName={cat1} categoryName="beauty" />
+            <Category fileName={cat1} categoryName="fragrances" />
+            <Category fileName={cat1} categoryName="tops" />
+            <Category fileName={cat1} categoryName="Denim" />
+            <Category fileName={cat1} categoryName="Skincare" />
             
         </div>
         <h1 className='m-5'>Products</h1>
