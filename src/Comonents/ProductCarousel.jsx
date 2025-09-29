@@ -21,7 +21,7 @@ function ProductCarousel({images=[]}) {
       <Slider {...settings}>
           {images && images.length>0 && images.map((img, index)=>(
                 <div key={index} className="d-flex justify-content-center align-items-center">
-                  <img src={img} width={'200px'} alt={`product-${index}`}/>
+                  <img src={img} width={'200px'} alt={`/ReactEcommerce/product-${index}`}/>
                 </div>
           ))}
       </Slider>

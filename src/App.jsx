@@ -10,9 +10,9 @@ const App = () => {
     <div style={{overflow:"hidden"}}>
       <StoreNavbar />
       <Routes>
-        <Route path='/' element= {< Home />} />
-        <Route path='/product/:id' element= {< Product />} />
-        <Route path='/cart' element= {< Cart />} />
+        <Route path='/ReactEcommerce' element= {< Home />} />
+        <Route path='/ReactEcommerce/product/:id' element= {< Product />} />
+        <Route path='/ReactEcommerce/cart' element= {< Cart />} />
       </Routes>
     </div>
   )

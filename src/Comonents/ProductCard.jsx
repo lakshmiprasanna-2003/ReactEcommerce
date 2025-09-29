@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function ProductCard({product}) {
   return (
     <Card style={{display:'flex', width: '18rem' }}>
-      <Link to={`product/${product.id}`}>
+      <Link to={`/ReactEcommerce/product/${product.id}`}>
         <Card.Img variant="top" src={product.thumbnail} />
       </Link>
       <Card.Body>

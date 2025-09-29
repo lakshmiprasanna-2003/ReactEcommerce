@@ -22,7 +22,7 @@ const Product = () => {
         let cart = JSON.parse(localStorage.getItem('cart')) || []
         cart.push(product)
         localStorage.setItem('cart', JSON.stringify(cart))
-        navigate('/cart')
+        navigate('/ReactEcommerce/cart')
     }
 
     return (

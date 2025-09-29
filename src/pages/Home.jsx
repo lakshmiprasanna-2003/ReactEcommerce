@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Carousel from '../Comonents/carousel'
 import Category from '../Comonents/Category'
+import Carousel from '../Comonents/Carousel'
 import axios from 'axios'
 import ProductCard from '../Comonents/ProductCard'
 
