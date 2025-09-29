@@ -27,7 +27,7 @@ function StoreNavbar({ onSearch, onCategorySelect }) {
   return (
     <Navbar expand="lg" style={{ background: 'lightblue' }} className='m-0 p-0'>
       <Container fluid>
-        <Navbar.Brand href="/"><b>MyStore</b></Navbar.Brand>
+        <Navbar.Brand href="/ReactEcommerce/"><b>MyStore</b></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }}>
