@@ -6,6 +6,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 
 const Product = () => {
     const [product, setProduct] = useState({})
+    const [quantity, setQuantity] = useState(1);
     const { id } = useParams()
     const navigate = useNavigate()
 
@@ -36,6 +37,17 @@ const Product = () => {
                     <h6>{product.description}</h6>
                     <h6>Category : {product.category}</h6>
                     <h3><b>Price : ${product.price}</b></h3>
+                    <div className="d-flex align-items-center mb-2">
+                        <label className="me-2"><b>Qty :</b></label>
+                        <input 
+                            type="number" 
+                            value={quantity} 
+                            min="1" 
+                            onChange={(e) => setQuantity(parseInt(e.target.value) || 1)} 
+                            style={{ width: '100px', borderRadius:'5px', height:'35px', fontSize:'1.3rem', margin:'5px' }}
+                        />
+                    </div>
+
                     <button 
                         className='btn btn-lg w-50' 
                         style={{ background: 'lightblue' }}
